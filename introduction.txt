@@ -2,7 +2,10 @@
 -> [How to use RabbitMQ with Python] = 
                         { https://medium.com/analytics-vidhya/how-to-use-rabbitmq-with-python-e0ccfe7fa959 }
 -> [Getting Started With RabbitMQ: Python] =
-                         { https://dzone.com/articles/getting-started-with-rabbitmq-python-1 }    
+                         { https://dzone.com/articles/getting-started-with-rabbitmq-python-1 } 
+
+-> [RabbitMQ CheatSheet and Tutorials] = 
+                        { https://github.com/curtis628/rabbitmq-tutorial }      
 
 # Introduction:
 
