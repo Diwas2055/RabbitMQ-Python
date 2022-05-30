@@ -1,0 +1,74 @@
+# Article:- 
+
+    [Url] = https://dzone.com/articles/getting-started-with-rabbitmq-python-1
+    [Title] = Getting Started with RabbitMQ in Python
+    [Author] = Dzone
+    
+
+# Introduction:
+
+    ->  It is a message broker that allows you to send and receive messages between different applications.
+    ->  It is a advanced messaging queuing protocol.
+    ->  It is a open source and is available for free.
+
+# Language: Python, Java , COBOL , PHP , Ruby , Node.Js
+
+# Basic Components:
+
+( i ) Producer / Publisher :-
+
+    -> The producer / publisher is the application that sends messages to the message broker.
+    -> Message is sent to the message broker by the producer.
+    -> The producer creates a Routing Key for the message.    
+
+( ii ) Consumer :- 
+
+    ->  Each consumer is associated with a queue.
+    ->  Each queue has a binding key.
+    ->  The consumer consumes the message from the queue.
+    ->  Consumer acknowledges the message and the message is then removed from the queue.
+
+( iii ) Routing and Binding Keys :- 
+
+    -> Routing Keys are defined by the publisher / producer.
+    -> Binding Keys are used to bind the consumer to the queue.
+    -> Words in the Routing and Binding Keys are separated by periods '.'
+    -> Routing and Binding Keys are used to discern which message is sent to which consumer.
+
+( iv ) Exchange :- 
+
+    -> the exchange manages which message is sent to which queue
+    -> Uses the binding key from the producer / publisher and the 
+    -> Producer / Publisher sends the message to the exchange but never directly to the queue.
+    -> There are several methods the exchange uses in order to choose which queue to send the message to.
+
+( v ) Exchange Methods
+
+-> Fanout :- 
+
+    -> Fanout exchange is used when the producer / publisher sends the message to the exchange.
+    -> The message is sent to all the queues.
+    -> The message is not routed to the queue. 
+
+-> Direct :- 
+
+    -> Direct exchange is used when the producer / publisher sends the message directly to the queue.
+    -> The message is sent to the queue directly.
+    -> The message is not routed to the queue.
+    -> If the Routing Key matches the Binding Key of the queue, the message is sent to the queue.
+
+-> Topic :- 
+
+    -> Topic exchange is used when the producer / publisher sends the message to the exchange.
+    -> * will match one or more words in the Routing Key.
+    -> # will match zero or more words in the Routing Key.
+    -> python.* will match python.all but not python.
+    -> python.# will match python.all and also python.
+
+-> Default :- 
+
+    -> Also Known as nameless exchange.
+    -> The Binding Key from the consumer queue is ignored.
+    -> Instead if the Routing Key from the producer / publisher matches the queue name then the message
+       is sent to the queue.
+    -> If Routing Key is match with queue name.
