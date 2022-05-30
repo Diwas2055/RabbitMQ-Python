@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 import pika
 
+# Creating a new instance of the `PlainCredentials` object.
+credentials = pika.PlainCredentials('postgres', 'root')
+
 #Create a new instance of the Connection object
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+parameters = pika.ConnectionParameters('127.0.0.1',5432,'/',credentials)
+connection = pika.BlockingConnection(parameters)
 
 #Create a new channel with the next available channel number or pass in a channel number to use
 channel = connection.channel()

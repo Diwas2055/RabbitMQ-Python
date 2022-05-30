@@ -1,9 +1,8 @@
 # Article:- 
-
-    [Url] = https://dzone.com/articles/getting-started-with-rabbitmq-python-1
-    [Title] = Getting Started with RabbitMQ in Python
-    [Author] = Dzone
-    
+-> [How to use RabbitMQ with Python] = 
+                        { https://medium.com/analytics-vidhya/how-to-use-rabbitmq-with-python-e0ccfe7fa959 }
+-> [Getting Started With RabbitMQ: Python] =
+                         { https://dzone.com/articles/getting-started-with-rabbitmq-python-1 }    
 
 # Introduction:
 
