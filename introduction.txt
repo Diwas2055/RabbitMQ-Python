@@ -21,7 +21,13 @@
 
     -> The producer / publisher is the application that sends messages to the message broker.
     -> Message is sent to the message broker by the producer.
-    -> The producer creates a Routing Key for the message.    
+    -> The producer creates a Routing Key for the message.   
+    -> credentials- In this we will define the username and password which is known by the rabbitmq-server(refer installation segment above)
+    -> host- by default we use ‘localhost’ or 0.0.0.0 as the listening server, but it can have any other IP addresses on cloud that has rabbitmq-server listening
+    -> port- this is by default 5672, but it should point to the port where our server is listening
+    -> exchange- this can be assumed as a bridge name which needed to be declared so that queues can be accessed
+    -> routing_key- this is a binding key corresponding to that key, we can set it to be any name
+    -> basic_publish- this is the method which we call to send the message to the corresponding queue 
 
 ( ii ) Consumer :- 
 
@@ -74,3 +80,8 @@
     -> Instead if the Routing Key from the producer / publisher matches the queue name then the message
        is sent to the queue.
     -> If Routing Key is match with queue name.
+
+
+
+Producer
+

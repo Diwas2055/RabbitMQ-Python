@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+
+#! Consumer
 import pika, sys, os
 
 def main():
