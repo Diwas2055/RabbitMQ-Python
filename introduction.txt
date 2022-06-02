@@ -81,7 +81,3 @@
        is sent to the queue.
     -> If Routing Key is match with queue name.
 
-
-
-Producer
-

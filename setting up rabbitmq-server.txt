@@ -1,0 +1,37 @@
+# Installation
+
+How to use RabbitMQ with python ?
+
+Link :- https://www.rabbitmq.com/tutorials/tutorial-one-python.html
+Link :- https://medium.com/analytics-vidhya/how-to-use-rabbitmq-with-python-e0ccfe7fa959
+
+
+-> Setting up rabbitmq-server:- 
+
+    To access RabbitMQ in python or what we call it as “a pure-Python AMQP 0–9–1 client for rabbitMQ”, 
+    there is a package(library) called pika which can be installed using pip. But first we need to install “rabbitmq-server” which will run as a system program at backend.
+
+    * Install erlang
+    * Install rabbitmq-server
+    * Enable rabbitmq-server as system program
+    * Start rabbitmq-server at backend
+    * Enable rabbitmq management plugin
+
+-> Command List: -
+    sudo apt-get update && sudo apt-get upgrade
+    sudo apt-get install erlang
+    sudo apt-get install rabbitmq-server
+    sudo systemctl enable rabbitmq-server
+    sudo systemctl start rabbitmq-server
+    sudo rabbitmq-plugins enable rabbitmq_management
+
+-> Create an username and password to login to rabbitmq management
+
+    ## user is the username and password is the new password
+        sudo rabbitmqctl add_user user password
+
+    ## giving that user administrative rights
+        sudo rabbitmqctl set_user_tags user administrator
+
+-> Granting administrator permissions to the user     
+    sudo rabbitmqctl set_permissions -p / user "." "." "."

@@ -1,5 +1,10 @@
 {
     "cSpell.ignoreWords": [
         "Fanout"
+    ],
+    "cSpell.words": [
+        "AMQP",
+        "rabbitmq",
+        "rabbitmqctl"
     ]
 }
