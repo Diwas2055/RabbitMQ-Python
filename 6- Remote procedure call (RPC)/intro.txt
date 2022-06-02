@@ -1,0 +1,26 @@
+# A note on RPC
+
+Although RPC is a pretty common pattern in computing, it's often criticized. 
+The problems arise when a programmer is not aware whether a function call is local 
+or if it's a slow RPC. Confusions like that result in an unpredictable system and adds unnecessary complexity to debugging. 
+Instead of simplifying software, misused RPC can result in unmaintainable spaghetti code.
+
+Bearing that in mind, consider the following advice:
+
+  ->  Make sure it's obvious which function call is local and which is remote.
+  ->  Document your system. Make the dependencies between components clear.
+  ->  Handle error cases. How should the client react when the RPC server is down for a long time?
+
+When in doubt avoid RPC. If you can, you should use an asynchronous pipeline 
+- instead of RPC-like blocking, results are asynchronously pushed to a next computation stage.
+
+Message properties
+    The AMQP 0-9-1 protocol predefines a set of 14 properties that go with a message. 
+    Most of the properties are rarely used, with the exception of the following:
+
+    -> delivery_mode: Marks a message as persistent (with a value of 2) or transient (any other value). 
+                     You may remember this property from the second tutorial.
+    -> content_type: Used to describe the mime-type of the encoding.
+                    For example for the often used JSON encoding it is a good practice to set this property to: application/json.
+    -> reply_to: Commonly used to name a callback queue.
+    -> correlation_id: Useful to correlate RPC responses with requests.
