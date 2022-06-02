@@ -22,3 +22,10 @@ channel.basic_publish(
     ))
 print(" [x] Sent %r" % message)
 connection.close()
+
+    #? Command to run:
+# python new_task.py First message.
+# python new_task.py Second message..
+# python new_task.py Third message...
+# python new_task.py Fourth message....
+# python new_task.py Fifth message.....
