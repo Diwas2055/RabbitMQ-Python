@@ -33,5 +33,27 @@ Link :- https://medium.com/analytics-vidhya/how-to-use-rabbitmq-with-python-e0cc
     ## giving that user administrative rights
         sudo rabbitmqctl set_user_tags user administrator
 
--> Granting administrator permissions to the user     
-    sudo rabbitmqctl set_permissions -p / user "." "." "."
+->  Granting administrator permissions to the user     
+        sudo rabbitmqctl set_permissions -p / user "." "." "."
+
+->  Listing all the users
+        sudo rabbitmqctl list_users
+        sudo rabbitmqctl list_permissions -p /
+
+->  Updating Tag of the user
+        sudo rabbitmqctl set_user_tags "john.doe" management
+
+->  To check the status of rabbitmq-server
+        sudo systemctl status rabbitmq-server
+
+->  Listing queues
+        sudo rabbitmqctl list_queues
+
+->  Listing exchanges
+        sudo rabbitmqctl list_exchanges
+
+->  Forgotten acknowledgment   
+        sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
+
+
+      
