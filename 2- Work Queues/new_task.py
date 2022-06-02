@@ -10,6 +10,7 @@ connection= pika.BlockingConnection(pika.ConnectionParameters(host='localhost', 
 
 channel = connection.channel()
 
+# durable=True ( It makes sure that RabbitMQ will never lose our queue.) 
 channel.queue_declare(queue='task_queue', durable=True)
 
 message = ' '.join(sys.argv[1:]) or "Hello World!"
