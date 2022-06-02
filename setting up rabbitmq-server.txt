@@ -41,6 +41,14 @@ Link :- https://medium.com/analytics-vidhya/how-to-use-rabbitmq-with-python-e0cc
         sudo rabbitmqctl list_permissions -p /
 
 ->  Updating Tag of the user
+    
+    => Tags that can be used:-
+        -> administrator
+        -> impersonator
+        -> management
+        -> monitoring
+        -> policymaker
+
         sudo rabbitmqctl set_user_tags "john.doe" management
 
 ->  To check the status of rabbitmq-server
