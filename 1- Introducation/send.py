@@ -4,7 +4,7 @@
 import pika
 
 # Creating a new instance of the `PlainCredentials` object.
-credentials = pika.PlainCredentials('user', 'password')
+credentials = pika.PlainCredentials('root', 'password')
 
 #Create a new instance of the Connection object
 connection= pika.BlockingConnection(pika.ConnectionParameters(host='localhost', credentials= credentials))
